@@ -1,0 +1,44 @@
+name: AzusaMute
+version: 1.0.0
+api: [5.0.0]
+main: KumaDev\AzusaMute\Main
+author: KumaDeveloper
+description: A plugin to mute players and mute all players on the server.
+commands:
+  mute:
+    description: Mute a player
+    usage: "§e/mute §f[player] [time]"
+    permission: azusamute.command.mute
+  unmute:
+    description: Unmute a player
+    usage: "§e/unmute §f[player]"
+    permission: azusamute.command.unmute
+  muteall:
+    description: Mute all players on the server
+    usage: "§e/muteall"
+    permission: azusamute.command.muteall
+  unmuteall:
+    description: Unmute all players on the server
+    usage: "§e/unmuteall"
+    permission: azusamute.command.unmuteall
+  mutecheck:
+    description: Check mute status of a player
+    usage: "§e/mutecheck §f[player]"
+    permission: azusamute.command.mutecheck
+
+permissions:
+  azusamute.command.mute:
+    description: Allows the player to mute others
+    default: op
+  azusamute.command.unmute:
+    description: Allows the player to unmute others
+    default: op
+  azusamute.command.muteall:
+    description: Allows the player to mute all players
+    default: op
+  azusamute.command.unmuteall:
+    description: Allows the player to unmute all players
+    default: op
+  azusamute.command.mutecheck:
+    description: Allows the player to check mute status of others
+    default: op
