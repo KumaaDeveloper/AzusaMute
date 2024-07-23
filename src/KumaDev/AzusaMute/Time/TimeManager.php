@@ -2,15 +2,7 @@
 
 namespace KumaDev\AzusaMute\Time;
 
-use KumaDev\AzusaMute\Main;
-
 class TimeManager {
-
-    private $plugin;
-
-    public function __construct(Main $plugin) {
-        $this->plugin = $plugin;
-    }
 
     public function formatTime(int $time): string {
         $hours = floor($time / 3600);
