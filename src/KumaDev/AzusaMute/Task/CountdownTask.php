@@ -25,6 +25,7 @@ class CountdownTask extends Task {
                 $player = $this->plugin->getServer()->getPlayerExact($playerName);
                 if ($player) {
                     $player->sendMessage($this->plugin->getPluginConfig()['messages']['mute_ended']);
+                    $this->plugin->playSound($player, "random.levelup");
                 }
             }
         }

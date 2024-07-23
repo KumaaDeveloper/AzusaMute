@@ -229,7 +229,7 @@ class Main extends PluginBase implements Listener {
         // Removed OP logging
     }
 
-    private function playSound(Player $player, string $soundName): void {
+    public function playSound(Player $player, string $soundName): void { // Changed to public
         $pk = new PlaySoundPacket();
         $pk->soundName = $soundName;
         $pk->x = $player->getPosition()->getX();
