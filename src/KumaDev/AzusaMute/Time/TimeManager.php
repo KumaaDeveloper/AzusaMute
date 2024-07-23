@@ -2,10 +2,14 @@
 
 namespace KumaDev\AzusaMute\Time;
 
+use KumaDev\AzusaMute\Main;
+
 class TimeManager {
 
-    public function __construct() {
-        // No need for the plugin property
+    private $plugin;
+
+    public function __construct(Main $plugin) {
+        $this->plugin = $plugin;
     }
 
     public function formatTime(int $time): string {

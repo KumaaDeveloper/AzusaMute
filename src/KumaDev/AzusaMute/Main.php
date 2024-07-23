@@ -26,7 +26,7 @@ class Main extends PluginBase implements Listener {
         $this->saveDefaultConfig();
         $this->config = $this->getConfig()->getAll();
         $this->data = new Config($this->getDataFolder() . "data.yml", Config::YAML);
-        $this->timeManager = new TimeManager($this);
+        $this->timeManager = new TimeManager($this); // Passing the plugin instance
         $this->getScheduler()->scheduleRepeatingTask(new CountdownTask($this), 40); // Update every 2 seconds (40 ticks)
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
